@@ -1,0 +1,16 @@
+h2 {
+    background: cornflowerblue;
+    /*height: 100px;*/
+    /*width: 200px;*/
+}
+
+a {
+    width: 200px; /*!!!!*/
+    height: 200px; /*!!!*/
+    background: silver;
+    color: green;
+}
+
+img {
+    width: 400px;
+}
