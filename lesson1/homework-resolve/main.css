@@ -1,0 +1,38 @@
+
+body{
+    background: silver;
+}
+img {
+    width: 400px;
+}
+
+
+h1 {
+    background: green;
+    color: #fff;
+}
+
+h2 {
+    background: #fcdb04;
+
+}
+
+a {
+    color: cornflowerblue;
+    text-decoration: none;
+}
+
+p {
+    background: silver;
+    color: indigo;
+    text-align: justify;
+}
+
+ul > {
+    background: mediumpurple;
+
+}
+
+li {
+    background: #fcdb04;
+}
