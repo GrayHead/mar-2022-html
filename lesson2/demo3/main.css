@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+}
+
+.fa-quote-right {
+    font-size: 40px;
+}
+
+.green-box {
+    height: 600px;
+    background: #35cd9f;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 350px;
+    height: 450px;
+    background: #162029;
+    margin-left: 30px;
+    margin-right: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fa-quote-right {
+    margin-top: 50px;
+    text-align: center;
+    display: block;
+    color: #35cd9f;
+    font-size: 60px;
+
+}
+
+.txt {
+    color: #fff;
+    font-family: Candara, sans-serif;
+    text-align: center;
+    width: 80%;
+    line-height: 20px;
+}
+
+.photo-box {
+    width: 30%;
+}
+
+.image {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-sizing: border-box;
+
+}
+
+.name {
+    color: #35cd9f;
+    font-family: Candara, sans-serif;
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: 900;
+}

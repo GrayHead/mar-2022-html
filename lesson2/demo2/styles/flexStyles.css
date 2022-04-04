@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+}
+
+.father {
+    height: 600px;
+    background: silver;
+    display: flex;
+
+    flex-direction: row; /*in row*/
+    justify-content: flex-start; /*left - right*/
+    align-items: center; /*to top*/
+    flex-wrap: wrap;
+
+
+}
+
+.child {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(35deg, red, yellow);
+    margin-left: calc(16.5% - 100px);
+    margin-right: calc(16.5% - 100px);
+
+}
+
