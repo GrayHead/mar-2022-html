@@ -1,0 +1,38 @@
+.card {
+
+    height: 200px;
+    width: 150px;
+    background: silver;
+    margin-top: 100px;
+    position: relative;
+
+
+}
+
+.round {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: cornflowerblue;
+    position: absolute;
+    top: -20px;
+    left: calc(150px / 2 - 20px);;
+}
+
+
+.box-1 {
+    width: 200px;
+    height: 200px;
+    background: mediumpurple;
+    position: relative;
+    z-index: 2
+}
+
+.box-2 {
+    width: 300px;
+    height: 300px;
+    background: coral;
+    position: relative;
+    z-index: 2;
+    top: 0;
+}

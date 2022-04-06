@@ -1,0 +1,46 @@
+/*id class pseudo tag*/
+/*0    1     0      3*/
+/*div.sector-1 ul > li {*/
+/*    background: cornflowerblue;*/
+/*}*/
+
+/*id class pseudo tag*/
+/* 0   0     0      2*/
+/*ul > li {*/
+/*    background: silver;*/
+/*    transition: 300ms;*/
+/*}*/
+
+
+/*.sector-1 ul > li:nth-child(3n+3) {*/
+/*    color: red;*/
+/*}*/
+
+/*div.sector-1 ul > li:hover {*/
+/*    background: #000;*/
+/*}*/
+
+a:visited {
+    color: red;
+}
+
+*:focus {
+    box-shadow: 10px 10px 10px 10px red;
+}
+
+li {
+    list-style: none;
+}
+
+li:before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: url("https://upload.wikimedia.org/wikipedia/en/a/aa/Bart_Simpson_200px.png");
+    background-size: cover;
+}
+
+li:after {
+    content: '!!!';
+}
