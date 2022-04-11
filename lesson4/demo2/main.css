@@ -1,0 +1,33 @@
+.container {
+    width: 100%;
+    height: 800px;
+    background: silver;
+
+}
+
+.a {
+    width: 100%;
+    height: 200px;
+    background: lightcoral;
+}
+
+
+.wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.b {
+    height: 600px;
+    width: 75%;
+    background: lightgoldenrodyellow;
+}
+
+.c {
+    height: 600px;
+    width: 25%;
+    background: cornflowerblue;
+}
+

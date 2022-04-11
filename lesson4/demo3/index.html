@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <link rel="stylesheet" href="../demo2/normal.css">
+
+    <style>
+        .container {
+            width: 100%;
+            min-height: 600px;
+
+        }
+
+        .a {
+            width: 100%;
+            background: #000;
+            height: 100px;
+        }
+
+        .global-wrapper {
+            display: flex;
+        }
+
+        .two-box-wrapper {
+            width: 75%;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .b {
+            width: 100%;
+            height: 50%;
+            background: blue;
+
+        }
+
+        .cde {
+            width: 100%;
+            height: 50%;
+            display: flex;
+        }
+
+        .c, .d, .e {
+            width: 33.3%;
+            background: linear-gradient(45deg, darkgreen, red);
+            height: 100%;
+        }
+
+        .f {
+            width: 25%;
+            height: 500px;
+            background: orchid;
+        }
+    </style>
+
+    <style>
+        @media screen and (min-width: 0) and (max-width: 1368px) {
+            .global-wrapper {
+                flex-direction: column;
+            }
+
+            .two-box-wrapper {
+                width: 100%;
+                height: 600px;
+            }
+
+            .f {
+                width: 100%;
+                height: 100px;
+            }
+        }
+
+    </style>
+
+    <style>
+        @media screen and (max-width: 928px) {
+            .b {
+                order: 2;
+            }
+
+            .cde {
+                order: 1;
+            }
+        }
+
+    </style>
+
+    <style>
+        .window {
+            height: 450px;
+            width: 250px;
+            background: cornflowerblue;
+            position: absolute;
+            top: 0;
+            left: -999px;
+            transition: 300ms;
+        }
+
+        .a:hover + .window {
+            top: 0;
+            left: 0;
+
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div class="container">
+    <div class="a"></div>
+    <div class="window"></div>
+    <div class="global-wrapper">
+        <div class="two-box-wrapper">
+            <div class="b"></div>
+            <div class="cde">
+                <div class="c"></div>
+                <div class="d"></div>
+                <div class="e"></div>
+            </div>
+        </div>
+        <div class="f"></div>
+    </div>
+
+</div>
+
+</body>
+</html>
