@@ -5,6 +5,91 @@
     <title>Title</title>
 </head>
 <body>
+<div id="wrap">
+    <!--asgfd-->
+    <ul class="menu">
+        <li>itm 1 1</li>
+        <li>itm 1 2</li>
+        <li>itm 1 3</li>
+        <li>itm 1 4</li>
+        <li>itm 1 5</li>
+    </ul>
+    <ul class="menu">
+        <li>itm 2 1</li>
+        <li>itm 2 2</li>
+        <li>itm 2 3</li>
+        <li>itm 2 4</li>
+        <li>itm 2 5</li>
+    </ul>
+</div>
 
+
+<form name="form-1">
+    <input type="text" name="username" value="vasya">
+    <input type="text" name="password" value="1234">
+</form>
+
+<!--<div id="wrap">-->
+<!--    <ul class="menu">-->
+<!--        <li>itm 1 1</li>-->
+<!--        <li>itm 1 2</li>-->
+<!--        <li>itm 1 3</li>-->
+<!--        <li>itm 1 4</li>-->
+<!--        <li>itm 1 5</li>-->
+<!--    </ul>-->
+
+<!--    <ul class="menu">-->
+<!--        <li>itm 2 1</li>-->
+<!--        <li>itm 2 2</li>-->
+<!--        <li>itm 2 3</li>-->
+<!--        <li>itm 2 4</li>-->
+<!--        <li>itm 2 5</li>-->
+<!--    </ul>-->
+<!--</div>-->
+
+<script>
+    // id unique - {}
+    // let wrap = document.getElementById('wrap');
+    // console.log(wrap);
+    //
+    //
+    //
+    //
+    //
+    // // class / tag - [{}] HTMLCollection
+    //
+    // let menus = document.getElementsByClassName('menu');
+    // console.log(menus);
+    //
+    // let liCollection = document.getElementsByTagName('li');
+    // console.log(liCollection);
+    //
+    // let ul1 = menus[0];
+    // console.log(ul1);
+    // let liOfUL1 = ul1.getElementsByTagName('li');
+    // console.log(liOfUL1);
+    //
+    // let ul1QS = document.querySelector('#wrap > ul'); // {} id class tag - 1
+    // console.log(ul1QS);
+    //
+    // let uls = document.querySelectorAll('body > #wrap > ul');
+    // console.log(uls);
+
+
+    // let wrap = document.getElementById('wrap');
+    // console.log(wrap.children); // 2
+    // console.log(wrap.childNodes); // 5
+
+
+    // let inputs = document.querySelectorAll('form>input');
+    // console.log(inputs);
+    //
+    let form1 = document.forms['form-1'];
+    console.log(form1);
+    console.log(form1.username.value);
+    console.log(form1.password.value);
+
+
+</script>
 </body>
 </html>
