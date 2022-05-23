@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>owu.com.ua - OKTEN SCHOOL</title>
+</head>
+<body>
+<label>
+    choose status. Current status is <span id="status"></span>
+    <input type="checkbox" name="status">
+</label>
+<br>
+<label>
+    chose age limit. Current age is - <span id="age"></span>
+    <input type="range" name="age" min="27" max="30">
+</label>
+
+
+<script>
+    let users = [
+        {gender: 'm', name: 'vasya', age: 31, status: false},
+        {gender: 'm', name: 'petya', age: 30, status: true},
+        {gender: 'm', name: 'kolya', age: 29, status: true},
+        {gender: 'f', name: 'olya', age: 28, status: false},
+        {gender: '', name: 'max', age: 30, status: true},
+        {gender: '', name: 'anya', age: 31, status: false},
+        {gender: '', name: 'oleg', age: 28, status: false},
+        {gender: '', name: 'andrey', age: 29, status: true},
+        {gender: '', name: 'masha', age: 30, status: true},
+        {gender: '', name: 'olya', age: 31, status: false},
+        {gender: '', name: 'max', age: 31, status: true}
+    ];
+
+    let filterResult;
+
+    let statusInput = document.querySelector('input[type=checkbox]');
+    let rangeInput = document.querySelector('input[type=range]');
+
+    let statusSpan = document.getElementById('status');
+    statusSpan.innerText = statusInput.checked
+
+    let ageSpan = document.getElementById('age');
+    ageSpan.innerText = rangeInput.value;
+
+    statusInput.onclick = function () {
+        let isCheck = this.checked;
+        statusSpan.innerText = isCheck;
+        if (isCheck) {
+            filterResult = users.filter(value => value.status);
+        } else {
+            filterResult = users.filter(value => !value.status);
+
+        }
+        console.log(filterResult);
+    };
+
+    rangeInput.onchange = function () {
+        ageSpan.innerText = this.value;
+        filterResult = filterResult.filter(value => value.age > +this.value);
+        console.log(filterResult);
+
+    };
+
+
+</script>
+</body>
+</html>

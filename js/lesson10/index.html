@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>owu.com.ua - OKTEN SCHOOL</title>
+    <style>
+        .target {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+<div class="target"></div>
+
+<input type="text" id="inp1">
+
+<hr>
+<form action="/asd" name="f1">
+    <input type="text" name="username">
+    <input type="email" name="email">
+    <button>send</button>
+</form>
+
+
+<script>
+    // let target = document.getElementsByClassName('target')[0];
+    // console.log(target);
+    //
+    // // target.onclick = function (e) {
+    // //     console.log(e);
+    // // };
+    // //
+    // // target.onclick = function () {
+    // //     console.log('log');
+    // // };
+    //
+    // // target.addEventListener('click', function (e) {
+    // //     console.log('1');
+    // // });
+    // //
+    // // target.addEventListener('click', function (e) {
+    // //     console.log('2');
+    // // });
+    //
+    //
+    // // target.onmousedown = function () {
+    // //     console.log('down');
+    // //     target.onmousemove = function () {
+    // //         console.log('move');
+    // //     };
+    // // };
+    // //
+    // // target.onmouseup = function () {
+    // //     console.log('up');
+    // //     target.onmousemove = null;
+    // // };
+
+    let input = document.getElementById('inp1');
+    // input.oninput = function (e) {
+    //     console.log(e);
+    //     // console.log(this.value);
+    //
+    // };
+
+    // input.onkeyup = function (e) {
+    //     let audio = new Audio("./music.mp3");
+    //     audio.oncanplaythrough = function () {
+    //         audio.play();
+    //     }
+    // };
+
+
+    let arr = [];
+    let f1 = document.forms.f1;
+    f1.onsubmit = function (e) {
+        e.preventDefault();
+        let usernameInput = f1.username;
+        let emailInput = f1.email;
+        let username = usernameInput.value;
+        let email = emailInput.value;
+        let user = {
+            username: username,
+            email: email
+        }
+
+        arr.push(user);
+        console.log(user);
+        // console.log(this.email.value);
+        // console.log(e.target.email.value);
+
+        usernameInput.value = '';
+        emailInput.value = '';
+    };
+
+
+</script>
+
+</body>
+</html>
+
