@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>owu.com.ua - OKTEN SCHOOL</title>
+</head>
+<body>
+
+<!--<video src="" id="videoplayer"></video>-->
+
+<div class="users"></div>
+<div class="chosen"></div>
+
+<script>
+    // BOM
+    // window.location.reload();
+
+    // navigator.mediaDevices.getUserMedia({video: true})
+    //     .then(stream => {
+    //         let videoplayer = document.getElementById('videoplayer');
+    //         videoplayer.srcObject = stream;
+    //         videoplayer.play();
+    //     });
+    //
+    // navigator.geolocation.getCurrentPosition(pos => {
+    //     console.log(pos);
+    // });
+
+
+    // let user1 = {name: 'kokos'};
+    // // let user2 = '{"name":"kokos"}'; // JSON
+    // // console.log(user2);
+    // // let user3 = JSON.stringify(user1);
+    // // console.log(user3);
+    // // let user3_JSON = JSON.parse(user3);
+    // // console.log(user3_JSON);
+    //
+    //
+    // localStorage.setItem('chosenOne', JSON.stringify(user1));
+    // // console.log(localStorage.getItem('asd'));
+    // let chosenJson = localStorage.getItem('chosenOne');
+    // console.log(chosenJson);//JSON obj
+    // let obj = JSON.parse(chosenJson);
+    // console.log(obj);
+
+
+    // let users = [
+    //     {name: 'vasya', age: 31, status: false},
+    //     {name: 'petya', age: 30, status: true},
+    //     {name: 'kolya', age: 29, status: true},
+    //     {name: 'olya', age: 28, status: false},
+    //     {name: 'max', age: 30, status: true},
+    //     {name: 'anya', age: 31, status: false},
+    //     {name: 'oleg', age: 28, status: false},
+    //     {name: 'andrey', age: 29, status: true},
+    //     {name: 'masha', age: 30, status: true},
+    //     {name: 'olya', age: 31, status: false},
+    //     {name: 'max', age: 31, status: true}
+    // ];
+    //
+    // let usersBlock = document.getElementsByClassName('users')[0];
+    // for (const user of users) {
+    //     let userDiv = document.createElement('div');
+    //     userDiv.innerText = user.name;
+    //     userDiv.onclick = function () {
+    //         localStorage.setItem('user', JSON.stringify(user));
+    //     };
+    //
+    //     usersBlock.appendChild(userDiv);
+    // }
+    //
+    //
+    // let userJSON = localStorage.getItem('user');
+    // let chosen = JSON.parse(userJSON);
+    // if (chosen) {
+    //     let chosenBlock = document.getElementsByClassName('chosen')[0];
+    //     chosenBlock.innerText = chosen.age + ' ' + chosen.name;
+    // }
+
+
+    // let users = [
+    //     {name: 'vasya', age: 31, status: false},
+    //     {name: 'petya', age: 30, status: true},
+    //     {name: 'kolya', age: 29, status: true},
+    //     {name: 'olya', age: 28, status: false},
+    //     {name: 'max', age: 30, status: true},
+    //     {name: 'anya', age: 31, status: false},
+    //     {name: 'oleg', age: 28, status: false},
+    //     {name: 'andrey', age: 29, status: true},
+    //     {name: 'masha', age: 30, status: true},
+    //     {name: 'olya', age: 31, status: false},
+    //     {name: 'max', age: 31, status: true}
+    // ];
+    // localStorage.setItem('users', JSON.stringify(users));
+
+    // let arrayJSON = localStorage.getItem('users');
+    // console.log(arrayJSON);//  JSON
+    //
+    // let usersObjects = JSON.parse(arrayJSON);
+    // if (usersObjects) {
+    //     usersObjects.pop();
+    //     let value = JSON.stringify(usersObjects);
+    //     localStorage.setItem('users', value);
+    // }
+    //
+    // localStorage.clear()
+
+    // sessionStorage
+
+    // console.log(document.cookie);
+    // document.cookie = 'name=kokos';
+    // console.log(document.cookie);
+    // document.cookie = 'id=100500';
+    // console.log(document.cookie);
+    // document.cookie = '_fbp=1.234.657889';
+    // console.log(document.cookie);
+    // document.cookie = 'max-age=1324353445';
+    // console.log(document.cookie);
+    // document.cookie = 'path=/';
+    // console.log(document.cookie);
+
+    // let cookies = document.cookie.split(';');
+    // // console.log(cookies);
+    //
+    // let obj = {};
+    // for (let i = 0; i < cookies.length; i++) {
+    //     let cookieTuple = cookies[i].split('=');
+    //     obj[cookieTuple[0].trim()] = cookieTuple[1];
+    // }
+    // console.log(obj);
+
+
+    //ES6
+
+    // let name = 'vasya';
+    // let age = 31;
+    // let user = {
+    //     name,
+    //     age,
+    //     foo() {
+    //         return 'bar';
+    //     }
+    // };
+    // console.log(user);
+
+    // let user = {name: 'vasay', age: 31};
+    // let name = user.name;
+
+    // let {name, wife: {name: wifeName}, wife} = {name: 'vasay', age: 31, wife: {name: 'olya'}};
+    // console.log(name, wife, wifeName);
+
+    // let user = {name: 'vasay', age: 31, skills: ['asd', 'qwe']};
+    // let user2 = {...user};
+    // let user2 = {...user,skills: [...user.skills]};
+
+
+    // console.log(user === user2);
+    // user2.name = 'kokos';
+    // user2.skills[2] = 'yywfygfw';
+    // console.log(user);
+    // console.log(user2);
+    //
+    // console.log(user.skills === user2.skills);
+
+    // let arr = [1, 2, 3];
+    // let arrClone = [0,0,0,0,...arr];
+    // console.log(arrClone);
+
+    // let arr = [1, 2, 3];
+    // let number1 = arr[0];
+    // let number3 = arr[2];
+
+    // let [number1, , number3] = [11, 22, 33];
+    // console.log(number1);
+    // console.log(number3);
+
+    // function foo({name}) {
+    //     console.log(name);
+    //
+    // }
+    //
+    // foo({name: 'asd', age: 123});
+    //
+    // function bar([a,,c]) {
+    //
+    // }
+    //
+    // bar([11, 22, 33]);
+
+</script>
+</body>
+</html>
