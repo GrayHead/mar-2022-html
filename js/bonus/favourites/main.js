@@ -17,3 +17,47 @@ const users = [
     {name: 'max', age: 31, status: true}
 ];
 
+const  favouritesKey = 'favourites';
+localStorage.setItem(favouritesKey, JSON.stringify([]));
+const container = document.getElementById('container');
+
+users.forEach(user => {
+    const userDiv = document.createElement('div');
+
+    const content = document.createElement('div');
+    content.innerText= `Name: ${user.name}\nAge: ${user.age}\nStatus: ${user.status}`;
+
+    const btn = document.createElement('button');
+    btn.innerText = 'Add to favourites';
+    btn.onclick = () => {
+        const favourites = JSON.parse(localStorage.getItem(favouritesKey)) || [];
+        favourites.push(user);
+        localStorage.setItem(favouritesKey, JSON.stringify(favourites));
+        btn.disabled = true;
+    }
+    userDiv.append(content, btn);
+    container.append(userDiv);
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
