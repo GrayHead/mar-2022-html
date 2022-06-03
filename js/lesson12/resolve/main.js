@@ -15,10 +15,10 @@
 //         for (const item of value) {
 //             const innerDiv = document.createElement('div');
 //             innerDiv.setAttribute('class', 'inner');
-//             innerDiv.innerHTML = `<h2>UserId : ${item.userId}</h2>
-//                                    <h3>ID : ${item.id}</h3>
-//                                     <p>Title : ${item.title}</p>
-//                                      <p>Body : ${item.body}</p>`;
+//             innerDiv.innerHTML = `<h2>UserID : ${item.userId}</h2>
+// <h2>ID : ${item.id}</h2>
+// <h2>Title : ${item.title}</h2>
+// <h2>Body : ${item.body}</h2>`;
 //             divWrap.append(innerDiv);
 //         }
 //     });
@@ -38,10 +38,10 @@
 //         for (const item of value) {
 //             const innerDiv = document.createElement('div');
 //             divWrap.append(innerDiv);
-//             for (const itemElement in item) {
+//             for (const itemKey in item) {
 //                 const divElement = document.createElement('div');
-//                 divElement.innerText =`${itemElement} ${item[itemElement]}`;
-//                 innerDiv.append(divElement);
+//                 divElement.innerText = `${itemKey} ${item[itemKey]}`;
+//                 divWrap.append(divElement);
 //             }
 //         }
 //     });
@@ -53,36 +53,39 @@
 // fetch(`https://jsonplaceholder.typicode.com/posts`)
 //     .then(value => value.json())
 //     .then(value => {
+//         const htmlDivElement = document.createElement('div');
+//         document.body.append(htmlDivElement);
 //         for (const post of value) {
-//             const div = document.createElement('div');
-//             document.body.append(div);
-//             const {userId, id, title, body} = post;
-//             div.innerHTML = `<h2>UserId : ${userId} - ID : ${id} - Title : ${title}</h2>
-//                               <p>Body : ${body}</p>`;
+//             const divWrap = document.createElement('div');
+//             htmlDivElement.append(divWrap);
+//             const { userId, id, title, body } = post;
+//             divWrap.innerHTML = `<h2>UserId : ${userId}</h2>
+// <h2>Id : ${id}</h2>
+// <h2>title : ${title}</h2>
+// <h2>body : ${body}</h2>`;
+//
 //             const button = document.createElement('button');
 //             button.innerText = 'Click';
-//             div.append(button);
+//             divWrap.append(button);
 //
 //             button.onclick = () => {
 //                 fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`)
 //                     .then(value => value.json())
 //                     .then(value => {
 //                         const wrapComments = document.createElement('div');
-//                         div.append(wrapComments);
+//                         divWrap.append(wrapComments);
 //                         for (const comment of value) {
-//
-//                             const commentsItem = document.createElement('div');
-//                             commentsItem.innerText = comment.postId + ' ' + comment.id + ' ' + comment.name + ' '
-//                                 + comment.email + ' ' + comment.body;
-//                             wrapComments.append(commentsItem);
+//                             const div = 'div';
+//                             const commentDiv = document.createElement(div);
+//                             commentDiv.innerText = comment.postId + ' ' + comment.id + ' ' + comment.name
+//                             + ' ' + comment.email + ' ' + comment.body;
+//                             wrapComments.append(commentDiv);
 //                             button.disabled = true;
 //                         }
-//
-//
 //                     });
 //             }
-//
 //         }
+//
 //
 //     });
 
@@ -90,42 +93,42 @@
 // fetch(`https://jsonplaceholder.typicode.com/posts`)
 //     .then(value => value.json())
 //     .then(value => {
+//         const htmlDivElement = document.createElement('div');
+//         document.body.append(htmlDivElement);
 //         for (const post of value) {
-//             const div = document.createElement('div');
-//             document.body.append(div);
-//             const { userId, id, title, body } = post;
-//             div.innerHTML = `<h2>UserId : ${userId} - ID : ${id} - Title : ${title}</h2>
-//                               <p>Body : ${body}</p>`;
+//             const divWrap = document.createElement('div');
+//             htmlDivElement.append(divWrap);
+//             const {userId, id, title, body} = post;
+//             divWrap.innerHTML = `<h2>UserId : ${userId}</h2>
+// <h2>Id : ${id}</h2>
+// <h2>title : ${title}</h2>
+// <h2>body : ${body}</h2>`;
+//
 //             const button = document.createElement('button');
 //             button.innerText = 'Click';
-//             div.append(button);
+//             divWrap.append(button);
 //
 //             button.onclick = () => {
 //                 fetch(`https://jsonplaceholder.typicode.com/comments`)
 //                     .then(value => value.json())
 //                     .then(value => {
 //                         const wrapComments = document.createElement('div');
-//                         div.append(wrapComments);
+//                         divWrap.append(wrapComments);
 //                         for (const comment of value) {
 //                             if (post.id === comment.postId) {
-//                                 const commentsItem = document.createElement('div');
-//                                 commentsItem.innerText = comment.postId + ' ' + comment.id +' '+ comment.name + ' '
-//                                     + comment.email + ' ' + comment.body;
-//                                 wrapComments.append(commentsItem);
+//                                 const div = 'div';
+//                                 const commentDiv = document.createElement(div);
+//                                 commentDiv.innerText = comment.postId + ' ' + comment.id + ' ' + comment.name
+//                                     + ' ' + comment.email + ' ' + comment.body;
+//                                 wrapComments.append(commentDiv);
 //                                 button.disabled = true;
 //                             }
 //
 //                         }
 //                     });
 //             }
-//
 //         }
-//
 //     });
-
-
-
-
 
 
 
